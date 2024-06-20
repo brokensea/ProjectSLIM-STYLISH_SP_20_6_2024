@@ -1,0 +1,799 @@
+BASIC STYLING * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgba(70, 69, 69, 0.828);
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper {
+  padding: 0 2vw;
+}
+
+/* fängt an */
+.headerContainer {
+  background-image: url("../img/background/1.png");
+  width: 100%;
+  height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.headerContainer nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 5%;
+}
+
+.headerContainer nav h2 {
+  font-family: Alegreya SC;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 39.6px;
+  text-align: center;
+  margin-left: 5%;
+}
+
+.headerContainer nav a {
+  width: 30px;
+  height: 30px;
+  margin-right: 5%;
+}
+
+.menuContainer {
+  position: relative;
+  display: inline-block;
+  margin-right: 5%;
+  height: 100%;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 100%;
+  background-color: rgba(8, 138, 230, 0.528);
+  box-shadow: 16px 16px 16px rgba(0, 0, 0, 0.2);
+  min-width: 80px;
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdownMenu li {
+  border: 2px solid black;
+}
+
+.dropdownMenu li:last-child {
+  border-bottom: none;
+}
+
+.dropdownMenu li a {
+  color: rgb(207, 73, 10);
+  padding: 20px 20px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdownMenu li a:hover {
+  background-color: #f1f1f1;
+}
+
+.menuContainer:hover .dropdownMenu {
+  display: block;
+}
+
+.headerContainer h1 {
+  font-family: Alegreya SC;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: center;
+}
+
+.headerContainer span {
+  font-family: Nixie One;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 56px;
+  text-align: center;
+  display: block;
+  margin-bottom: 5%;
+}
+
+/* Main OurLastestWorks */
+.betweenBox {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 0;
+}
+
+.betweenBox h2 {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #3A4F52;
+  margin-left: 10%;
+
+}
+
+.betweenBox h2 span {
+  font-family: Alegreya Sans;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 39.6px;
+  text-align: left;
+  display: block;
+}
+
+.betweenBox a {
+  margin-right: 10%;
+}
+
+.viewAllButton {
+
+  font-family: Helvetica Neue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+
+  width: 100px;
+  height: 50px;
+  background-color: white;
+}
+
+.viewAllButton:hover {
+  animation: backgroundAnimation 1s linear 0s forwards;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-color: #4b6bc5;
+    color: #2b2928
+  }
+
+  100% {
+    background: linear-gradient(to right, #4b6bc5, #76bd9a);
+    color: white;
+  }
+}
+
+/* bildBox */
+.bildbox {
+  display: grid;
+  margin: 0 10%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2px;
+  height: 70vh;
+
+}
+
+.buttonContainer {
+  width: 500px;
+  height: 300px;
+  /* for animation */
+  overflow: hidden;
+  position: relative;
+}
+
+
+.buttonBildBoxBackground {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s ease;
+  /* 背景图片放大的过渡效果 */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  /* 绝对定位，覆盖整个容器 */
+  top: 0;
+  left: 0;
+}
+
+.buttonContainer:nth-child(1) .buttonBildBoxBackground {
+  background-image: url("../img/bild/1.png");
+}
+
+.buttonContainer:nth-child(2) .buttonBildBoxBackground {
+  background-image: url("../img/bild/2.png");
+}
+
+.buttonContainer:nth-child(3) .buttonBildBoxBackground {
+  background-image: url("../img/bild/3.png");
+}
+
+.buttonContainer:nth-child(4) .buttonBildBoxBackground {
+  background-image: url("../img/bild/4.png");
+}
+
+.buttonContainer:nth-child(5) .buttonBildBoxBackground {
+  background-image: url("../img/bild/5.png");
+}
+
+.buttonContainer:nth-child(6) .buttonBildBoxBackground {
+  background-image: url("../img/bild/6.png");
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #37aacd89;
+
+  display: none;
+  z-index: 1;
+  /*make sure behinde */
+}
+
+.buttonBildBox {
+  display: none;
+  /* 初始隐藏 */
+  font-family: Helvetica Neue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  width: 100px;
+  height: 50px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.395);
+  transition: opacity 0.3s ease;
+  /* 透明度过渡效果 */
+  position: relative;
+  z-index: 2;
+  /* 确保在 overlay 上方 */
+}
+
+.buttonBildBox:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid royalblue;
+}
+
+.buttonContainer:hover .buttonBildBoxBackground,
+.buttonContainer:hover .buttonBildBox,
+.buttonContainer:hover .overlay {
+  display: flex;
+  /* 显示背景和按钮 */
+}
+
+.buttonContainer:hover .buttonBildBoxBackground {
+  transform: scale(1.2);
+  /* 背景图片放大 */
+}
+
+.buttonContainer:hover .buttonBildBox {
+  display: block;
+  /* 显示按钮 */
+  opacity: 1;
+  /* 显示按钮 */
+}
+
+.buttonContainer:hover .overlay {
+  display: block;
+  /* 显示覆盖层 */
+}
+
+/* .bildbox img{
+  width: 500px;
+  height: 300px;
+} */
+
+/* ourServicesContainer */
+.ourServicesContainer {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../img/background/2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  /* set relativ postion */
+}
+
+.blackGroundContainer {
+  width: 80%;
+  height: 80%;
+  background: #00000033;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.blackGroundContainer h2 {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.blackGroundContainer h2 span {
+  font-family: Alegreya Sans;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 39.6px;
+  text-align: center;
+  display: block;
+  margin-bottom: 5%;
+}
+
+.iconTextContainer {
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  /* align-items: baseline; */
+  flex-basis: 20%;
+  width: 100%;
+  gap: 5%;
+}
+
+.iconTextBox {
+  /* width: 25%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.iconTextBox p {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+
+}
+
+.iconTextBox p span {
+  font-family: Alegreya Sans;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 33px;
+  text-align: center;
+  display: block;
+}
+
+/* bildBox4Page */
+.bildBox4Page {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.bildText4PageBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  /* justify-content: 25%; */
+  max-width: 50%;
+  gap: 10px;
+}
+
+.bildText4PageBox h3 {
+  font-family: Alegreya Sans;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 33px;
+}
+
+.bildText4PageBox p {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.bildText4PageBox h4 {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+
+.bildText4PageBox a {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #4DA7CA;
+}
+
+.bildText4PageBox a:hover {
+  text-decoration: underline;
+}
+
+/* getAfreeQuoteContainer */
+.getAfreeQuoteContainer {
+  margin-top: 5%;
+  width: 100%;
+  height: 50vh;
+  background-image: url("../img/background/3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.blackGroundContainer h2 {
+  font-family: Alegreya Sans;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+}
+
+.getFreeButton {
+  width: 180px;
+  height: 46px;
+  font-family: Helvetica Neue;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+}
+
+.getFreeButton:hover {
+  animation: backgroundAnimation 1s linear 0s forwards;
+}
+
+.tesimonialsContainer {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  color: #3A4F52;
+  justify-content: center;
+  align-items: center;
+}
+
+.tesimonialsContainer p {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  color: #6A6A6A;
+}
+
+.tesimonialsContainer span {
+  font-family: Alegreya Sans;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+}
+
+.faceTextContainer {
+  margin-top: 5%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.faceTextBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: 25%; */
+  align-items: center;
+  max-width: 50%;
+
+}
+
+.faceTextContainer h4 {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-align: center;
+}
+
+.faceTextContainer span {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+  display: block;
+}
+
+/* ContactContainer */
+.ContactContainer {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../img/background/4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+}
+
+.ContactContainer .blackGroundContainer h3 {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.ContactContainer .blackGroundContainer span {
+  font-family: Alegreya Sans;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: center;
+  display: block;
+}
+
+.inputBox {
+  width: 60%;
+  height: 60%;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.inputBox input {
+  width: 60%;
+  height: 10%;
+  color: white;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+
+}
+
+.inputBox input::placeholder {
+  font-family: Helvetica Neue;
+  font-weight: 400;
+  line-height: 16.7px;
+  text-align: left;
+  color: white;
+  font-size: 20px;
+}
+
+/* footer */
+footer .footerContainer {
+  background-color: #2B3E51;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+}
+
+.footerContainer p {
+  font-family: Helvetica Neue;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  color: #FFFFFF;
+  margin-top: 2%;
+  margin-left: 10%;
+}
+
+/* Galaxy Fold */
+@media only screen and (max-width: 1280px) {
+  .buttonContainer {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+/* ! Tablet IPad 11*/
+@media only screen and (max-width: 834px) {
+  .buttonContainer {
+    width: 200px;
+    height: 300px;
+  }
+
+  .ourServicesContainer {
+    height: 100vh;
+  }
+
+  .iconTextContainer {
+    flex-direction: column;
+  }
+
+  .tesimonialsContainer {
+    height: 130vh;
+  }
+
+  .faceTextContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ! Handy Iphone 13 */
+
+@media only screen and (max-width: 428px) {
+  .headerContainer nav h2 {
+    font-size: 25px;
+  }
+
+  .headerContainer h1 {
+    font-size: 12px;
+  }
+
+  .headerContainer span {
+    font-size: 25px;
+  }
+
+
+  .betweenBox {
+    height: 40vh;
+    justify-content: space-around;
+  }
+
+  /* bildbox */
+  .bildbox {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    margin: 0 5%;
+    height: auto;
+    position: relative;
+    margin-bottom: 5%;
+  }
+
+  .buttonContainer {
+    width: 100%;
+    height: 200px;
+  }
+
+  .buttonBildBoxBackground {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ourServicesContainer {
+    height: auto;
+    /* Hight adaptive content */
+  }
+
+  .overlay {
+    display: block;
+  }
+
+  .buttonBildBox {
+    display: flex;
+  }
+
+
+
+  .bildBox4Page {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, auto);
+    height: auto;
+  }
+
+  .bildText4PageBox {
+    max-width: 100%;
+  }
+
+  .getAfreeQuoteContainer {
+    height: auto;
+    min-height: 60vh;
+    padding: 5% 0;
+  }
+
+  .tesimonialsContainer {
+    height: auto;
+  }
+
+  .inputBox {
+    width: 100%;
+    height: 60%;
+  }
+
+  .inputBox input {
+    width: 90%;
+  }
+
+  /* Apple Watch 6 */
+  @media only screen and (max-width: 320px) {
+
+    .betweenBox {
+      height: auto;
+    }
+
+    .betweenBox h2 span {
+      font-size: 20px;
+    }
+
+    .viewAllButton {
+      font-size: 16px;
+      font-weight: 200;
+      line-height: 12px;
+      width: 60px;
+      height: 50px;
+    }
+
+    .ContactContainer {
+      height: auto;
+    }
+
+    footer .footerContainer {
+      height: auto;
+    }
+  }
+}
